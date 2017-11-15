@@ -1,0 +1,71 @@
+function y = f(x)
+y = x*exp(-sin(x))/(1+x^2);
+
+=======================
+using the symbols for the array operations:
+
+function y = f(x)
+y = x.*exp(-sin(x))./(1+x.^2);
+
+========================
+function y = f(x)
+y1 = x.*(x < 0);
+y2 = x.^2.*( (x < 2) - (x < 0) );
+y3 = 4*(1 - (x < 2));
+y = y1 + y2 + y3;
+
+s = -2:.1:4;
+r = f(s);
+
+========================
+x=-4:.1:4;
+plot(x,f(x))
+
+ezplot(f,1,3)
+ezplot('f',1,3)
+========================
+f is defined as an inline function:
+root = fzero(f, [x0, x1])
+
+f = inline('sin(x) - x/2')
+root = fzero(f, [1,3])
+
+
+
+f is defined in an mfile:
+root = fzero(’f’, [x0, x1])
+
+========================
+x = 0:.1:20;
+for n = 1:10
+plot(x, x.^n.*exp(-n*x))
+hold on
+end
+hold off
+
+=========================
+f = inline('exp(-x) - sin(x)')
+x = linspace(0, 10, 101);
+plot(x, f(x), x, 0*x, 'g')
+est = input('enter the 4 estimates as a four vector [*,*,*,*] ')
+for n = 1:4
+root = fzero(f, est(n))
+end
+
+===========================save as myexp.m
+% define the vector of points where the function is to be
+% computed and plotted.
+x = -2:.2:2;
+% the first term in the approx. is set equal to 1.
+term = ones(size(x));
+y = term;
+% add up the terms and store the result in the vector y
+for n = 1:4
+term = term.*(x/n);
+y = y + term;
+end
+% display the results as column vectors
+[x', y', exp(x)', (y-exp(x))']
+maxerror = max(abs(y - exp(x)))
+plot(x,y,x,exp(x), '--')
+

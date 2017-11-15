@@ -1,0 +1,94 @@
+<!dOCTYPE HTML>
+<html lang = "en">
+ <head>
+    <title>FORM</title>
+    <meta charset = "UTF-8" />
+ </head>
+   <body>
+      <h1>Form</h1>
+      <fieldset>
+        <legend>textbox</legend>
+        <p>
+          <label>textbox</label>
+          <input type = "text"
+                 id = "myText"
+                 value = "text here" />
+        </p>
+        <p>
+          <label>Password</label>
+          <input type = "password"
+                 id = "myPwd"
+                 value = "secret" />
+        </p>
+
+        <p>
+          <label>Text Area</label>
+          <textarea id = "myTextArea"
+                    rows = "3"
+                    cols = "80">Your text here</textarea>
+        </p>
+      </fieldset>
+
+      <fieldset>
+         <legend>selecting elements</legend>
+         <p>
+           <label>Select List</label>
+
+           <select id = "myList">
+             <option value = "1">one</option>
+             <option value = "2">two</option>
+             <option value = "3">three</option>
+             <option value = "4">four</option>
+           </select>
+         </p>
+
+         <p>
+          <label>Check boxes</label>
+           <input type = "checkbox"
+                  id = "chkEggs"
+                  value = "greenEggs" />
+          <label for = "chkEggs">Green Eggs</label>
+           
+           <input type = "checkbox"
+                  id = "chkHam"
+                  value = "ham" />
+          <label for = "chkHam">Ham</label>
+         </p>
+         <p>
+           <label>Radio buttons</label>
+           <input type = "radio"
+                  name = "radSize"
+                  id = "sizeSmall"
+                  checked = "checked" />
+           <label for = "sizeSmall">small</label>
+
+           <input type = "radio"
+                  name = "radSize"
+                  id = "sizeMed"
+                  value = "medium" />
+           <label for = "sizeMed">medium</label>
+
+           <input type = "radio"
+                  name = "radSize"
+                  id = "sizeLarge"
+                  value = "large" />
+           <label for = "sizeLarge">large</label>
+         </p>
+       </fieldset>
+
+       <fieldset>
+         <legend>Buttons</legend>
+         <p>
+           <button type = "button">
+              standard button
+           </button>
+
+           <input type = "button"
+                  value = "input button" />
+           <input type = "reset" />
+           <input type = "submit" />
+        </p>
+       </fieldset>
+    </form>
+  </body>
+</html>

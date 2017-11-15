@@ -1,0 +1,36 @@
+//All Rights Reserved By The Programmer SMAli KSS.
+//F_Name: Seyed Mohammad Ali, L_Name: Kazemi Sheikh Shabani
+//Student ID: 92222004
+//Problem 2.3-7
+
+
+import javax.swing.JFrame;
+import java.util.Arrays;
+
+
+public class m{
+public static void main(String[] args){
+}    
+public static boolean test(int[] a, int val) 
+{
+    Arrays.sort(a);
+
+    int i = 0;            // index of first element.
+    int j = a.length - 1; // index of last element. 
+
+    while(i<j)
+    {
+       
+        if(a[i]+a[j] == val) // check if the sum of elements at index i and j equals val.
+            return true;
+       
+        else if(a[i]+a[j] > val) // else if sum if more than val.
+            j--;
+       
+        else // else if sum is less than val.
+            i++;
+    }
+     // failed to find any such pair.
+    return false; 
+}
+}

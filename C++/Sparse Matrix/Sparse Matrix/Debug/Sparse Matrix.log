@@ -1,0 +1,16 @@
+﻿Build started 2/10/2014 1:25:04 PM.
+     1>Project "G:\Programs\C++\Sparse Matrix\Sparse Matrix\Sparse Matrix.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\Sparse Matrix.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Sparse Matrix.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "Sparse Matrix.cpp"
+         Sparse Matrix.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\Programs\C++\Sparse Matrix\Debug\Sparse Matrix.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\Programs\C++\Sparse Matrix\Debug\Sparse Matrix.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\Programs\C++\Sparse Matrix\Debug\Sparse Matrix.lib" /MACHINE:X86 "Debug\Sparse Matrix.obj"
+         Debug\stdafx.obj
+         Sparse Matrix.vcxproj -> G:\Programs\C++\Sparse Matrix\Debug\Sparse Matrix.exe
+     1>Done Building Project "G:\Programs\C++\Sparse Matrix\Sparse Matrix\Sparse Matrix.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:22.92
