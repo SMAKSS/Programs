@@ -1,0 +1,29 @@
+# Project: khayyam Triangle
+# Makefile created by Dev-C++ 5.2.0.0
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = "khayyam\ Triangle.o" $(RES)
+LINKOBJ  = "khayyam Triangle.o" $(RES)
+LIBS     = -L"F:/Dev-Cpp/MinGW32/lib" -static-libstdc++ -static-libgcc  
+INCS     = -I"F:/Dev-Cpp/MinGW32/include" 
+CXXINCS  = -I"F:/Dev-Cpp/MinGW32/include" 
+BIN      = "khayyam Triangle.exe"
+CXXFLAGS = $(CXXINCS)  
+CFLAGS   = $(INCS)  
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before "khayyam Triangle.exe" all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "khayyam Triangle.exe" $(LIBS)
+
+"khayyam\ Triangle.o": khayyam\ Triangle.c
+	$(CC) -c "khayyam Triangle.c" -o "khayyam Triangle.o" $(CFLAGS)

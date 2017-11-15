@@ -1,0 +1,29 @@
+# Project: Mabna
+# Makefile created by Dev-C++ 5.2.0.0
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Mabna.o $(RES)
+LINKOBJ  = Mabna.o $(RES)
+LIBS     = -L"I:/Personal/Software/Dev-Cpp 5.2.0.0 32bit Portable/Dev-Cpp/MinGW32/lib" -static-libstdc++ -static-libgcc  
+INCS     = -I"I:/Personal/Software/Dev-Cpp 5.2.0.0 32bit Portable/Dev-Cpp/MinGW32/include" 
+CXXINCS  = -I"I:/Personal/Software/Dev-Cpp 5.2.0.0 32bit Portable/Dev-Cpp/MinGW32/include" 
+BIN      = Mabna.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS   = $(INCS)  
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Mabna.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "Mabna.exe" $(LIBS)
+
+Mabna.o: Mabna.c
+	$(CC) -c Mabna.c -o Mabna.o $(CFLAGS)

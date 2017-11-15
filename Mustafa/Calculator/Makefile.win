@@ -1,0 +1,30 @@
+# Project: calculator
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Calculator.o $(RES)
+LINKOBJ  = Calculator.o $(RES)
+LIBS =  -L"C:/Documents and Settings/t.PC10/Desktop/Dev-Cpp/lib"  
+INCS =  -I"C:/Documents and Settings/t.PC10/Desktop/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Documents and Settings/t.PC10/Desktop/Dev-Cpp/include/c++/3.3.1"  -I"C:/Documents and Settings/t.PC10/Desktop/Dev-Cpp/include/c++/3.3.1/mingw32"  -I"C:/Documents and Settings/t.PC10/Desktop/Dev-Cpp/include/c++/3.3.1/backward"  -I"C:/Documents and Settings/t.PC10/Desktop/Dev-Cpp/lib/gcc-lib/mingw32/3.3.1/include"  -I"C:/Documents and Settings/t.PC10/Desktop/Dev-Cpp/include" 
+BIN  = calculator.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before calculator.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "calculator.exe" $(LIBS)
+
+Calculator.o: Calculator.c
+	$(CC) -c Calculator.c -o Calculator.o $(CFLAGS)

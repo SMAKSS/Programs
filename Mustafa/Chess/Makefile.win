@@ -1,0 +1,29 @@
+# Project: Chess
+# Makefile created by Dev-C++ 4.9.9.1
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Chess.o $(RES)
+LINKOBJ  = Chess.o $(RES)
+LIBS =  -L"D:/Dev-Cpp/lib"  
+INCS =  -I"D:/Dev-Cpp/include" 
+CXXINCS =  -I"D:/Dev-Cpp/include/c++/3.3.1"  -I"D:/Dev-Cpp/include/c++/3.3.1/mingw32"  -I"D:/Dev-Cpp/include/c++/3.3.1/backward"  -I"D:/Dev-Cpp/lib/gcc-lib/mingw32/3.3.1/include"  -I"D:/Dev-Cpp/include" 
+BIN  = Chess.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Chess.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "Chess.exe" $(LIBS)
+
+Chess.o: Chess.c
+	$(CC) -c Chess.c -o Chess.o $(CFLAGS)
